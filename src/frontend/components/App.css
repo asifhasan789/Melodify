@@ -1,0 +1,323 @@
+* {
+  font-family: 'Signika Negative', sans-serif;
+} 
+.App {
+  position:relative;
+  width: 100vw;
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App .background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../media/background2.png) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+.App .spinner-border {
+  color: #ffffff;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App .contents {
+  display: flex;
+}
+
+.App .body {
+  width: 100vw;
+  height: 10%;
+}
+
+/* navbar starts */
+
+.App .navbar {
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  background-color:rgb(34, 34,34,0.6);
+  width: 20%;
+  backdrop-filter: blur(10px);
+}
+
+.App .container, .App .me-auto, .App .nav_links {
+  display: flex;
+  flex-direction: column;
+}
+
+.App .navbrand {
+  position: absolute;
+  left: 7%;
+}
+
+.App .navbrand:hover {
+  transform: scale(1.2);
+  transition: .4s;
+}
+
+.App .nav_links .me-auto a {
+  padding: 10px 0 10px 0;
+  color: #ffffffab;
+  text-align: left;
+}
+.App .nav_links .nav-link:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: .3s;
+}
+.App .nav_links .nav-link:visited {
+  color: #ffffff;
+}
+
+.App .me-auto {
+  margin-top: 5rem;
+}
+
+.App .container #afont {
+  padding-right: 1.2rem ;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.App .btns {
+  margin: 0;
+  position: relative;
+  right: 20%;
+}
+.App .btns button {
+  background-color: rgb(77, 222, 77);
+  margin: 0;
+  position: relative;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+} 
+/* navbar playlist starts  */
+
+.App .playlist {
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.App .playlist .heading {
+  color: #ffffff;
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.App .playlist a {
+  display: block;
+  padding: 0px;
+  text-decoration: none;
+  color: #ffffffab;;
+  padding:5px;
+}
+
+.App .playlist a:hover {
+  transform: scale(1.1);
+  transition: .5s ease;
+  color:white
+}
+
+/* navbar playlist ends */
+
+/* navbar footer starts */
+
+.App .na_footer {
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 10%;
+}
+.App .na_footer .footer {
+  margin: 16px;
+  padding: 0 16px;
+  text-align: start;
+}
+.na_footer .footer .foot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.App .na_footer .footer .foot .footlink {
+  margin-right: 20px;
+}
+.App .na_footer .footer .foot .footlink .links {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #ffffffab;
+} 
+.App .na_footer .footer .foot .footlink .links:hover {
+  color: #ffffff;
+} 
+
+/* navbar footer ends */
+
+/* navbar ends */
+
+/* awaiting page */
+
+.App .info {
+  margin-left: 20%;
+}
+
+.App .info .awaiting {
+  padding-top: 20%;
+
+  display: flex;
+  width: 100%;
+  height: 88.5vh;
+  justify-content: center;
+}  
+.App .info .awaiting > span {  
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  text-align: center;
+}
+
+/* awaiting endds */
+
+
+
+/* top header navbar starts */
+
+.App .header {
+  margin-left: 20%;
+  background-color: rgba(28, 28, 28, 0.835);
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  position: relative;
+  color: white ;
+}
+
+.App .header .left_part{
+  min-width: 300px;
+  background-color: white;
+  color: gray;
+  flex: 0.4;
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+}
+
+.App .header .left_part > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  z-index: 999;
+}
+
+.App .header .right_part {
+  flex: 0.2;
+  align-items:center ;
+  display: flex;
+}
+
+.App .header .right_part .notify_btn {
+  background-color: rgba(28, 28, 28, 0);
+  border: none;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+.App .header .right_part .notify_btn .notify_icon:hover {
+  animation: tilt 0.9s ease-in-out infinite;
+  rotate: 20;
+}
+@keyframes tilt {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(20deg);
+  }
+  75% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.App .header .right_part .notify_btn:hover {
+  transform: scale(1.5);
+  transition: 0.3s ease;
+}
+
+.App .header .right_part .wallet_btn {
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgb(91, 91, 191);
+  background-color: rgb(91, 91, 191);
+  color: rgb(130, 207, 130);
+  border: none;
+  padding: 10px;
+}
+.App .header .right_part .wallet_btn .icon {
+  padding: 2px;
+}
+.App .header .right_part .wallet_btn:hover {
+  background-color: rgb(80, 80, 158);
+  transform: scale(1.1);
+  color: rgb(88, 216, 88);
+  transition: 0.3s ease;
+}
+
+
+.popover {
+  inset: 16px auto auto 0px !important;
+  max-width: 400px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bs-popover-bottom > .popover-arrow::after {
+  top: -16px;
+  border-width: 0.2rem 0.5rem 1.2rem 0.5rem;
+}
+
+.popover-header {
+  background-color: #3f51b5;
+  color: #fff;
+  border-bottom: none;
+}
+
+.popover-body {
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: url(../media/background4.png) no-repeat center;
+  filter: grayscale(100%);
+}
+
+/* top header ends */
